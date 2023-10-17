@@ -1,4 +1,9 @@
-import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART } from "./constant";
+import {
+  ADD_TO_CART,
+  EMPTY_CART,
+  PRODUCT_LIST,
+  REMOVE_FROM_CART,
+} from "./constant";
 
 export const AddToCart = (data) => {
   return {
@@ -15,5 +20,10 @@ export const RemoveFromCart = (data) => {
 export const EmptyCart = () => {
   return {
     type: EMPTY_CART,
+  };
+};
+export const ProcuctList = () => {
+  return {
+    type: PRODUCT_LIST,
   };
 };

@@ -1,9 +1,17 @@
 import React from "react";
-import { AddToCart, EmptyCart, RemoveFromCart } from "../redux/action";
-import { useDispatch } from "react-redux";
+
+import {
+  AddToCart,
+  EmptyCart,
+  ProcuctList,
+  RemoveFromCart,
+} from "../redux/action";
+import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
   const dispatch = useDispatch();
+  let data = useSelector((state) => state.ProcuctList);
+  console.log("Main data componetents", data);
   const product = {
     name: "iPhone",
     color: "red",
@@ -14,10 +22,11 @@ const Main = () => {
       <button onClick={() => dispatch(AddToCart(product.name))}>
         Add To Cart
       </button>
-      <button onClick={() => dispatch(RemoveFromCart(product.name))}>
+      <button onClick={() => dispatch(RemoveFromCart())}>
         Remove from Cart
       </button>
       <button onClick={() => dispatch(EmptyCart())}>Empty Cart</button>
+      <button onClick={() => dispatch(ProcuctList())}>Procuct List</button>
     </>
   );
 };

@@ -9,7 +9,7 @@ const Header = () => {
         <span>{result.length}</span>
         <img
           src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
-          alt=""
+          alt="cart icon"
         />
       </div>
     </div>
